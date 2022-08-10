@@ -38,11 +38,11 @@ function isCollide(sarr)
     }
     return false;
 }
-function gameEngine(){
+async function gameEngine(){
     //part1 : updating the array and food
     if(isCollide(snakeArr))
     {
-        gameOverSound.play();
+        await gameOverSound.play();
         musicSound.pause();
         inputDir={x:0,y:0};
         alert("press anykey to play again");
@@ -124,22 +124,22 @@ window.addEventListener('keydown',e=>{
     switch(e.key)
     {
         case "ArrowUp":
-            console.log("ArrowUp");
+           // console.log("ArrowUp");
             inputDir.x=0;
             inputDir.y=-1;
             break;
         case "ArrowDown":
-            console.log("ArrowDown");
+           // console.log("ArrowDown");
             inputDir.x=0;
             inputDir.y=1;
             break;
         case "ArrowLeft":
-            console.log("ArrowLeft");
+           // console.log("ArrowLeft");
             inputDir.x=-1;
             inputDir.y=0;
             break;
         case "ArrowRight":
-            console.log("ArroeRight");
+           // console.log("ArroeRight");
             inputDir.x=1;
             inputDir.y=0;
             break;
